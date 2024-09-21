@@ -1,0 +1,19 @@
+{
+  "$schema": "https://codemod-utils.s3.us-west-1.amazonaws.com/configuration_schema.json",
+  "name": "launchdarkly-to-statsig-migration/client-and-user-intialization",
+  "version": "1.0.0",
+  "engine": "jscodeshift",
+  "private": false,
+  "arguments": [],
+ "meta": {
+    "tags": [
+      "launchdarkly",
+      "statsig",
+      "migration",
+      "client",
+      "user",
+      "intialization"
+    ],
+    "git": "https://github.com/dfordp/launchdarkly-to-statsig-migration-client-and-user-intialization"
+  }
+}
