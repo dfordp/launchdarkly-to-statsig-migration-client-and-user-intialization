@@ -37,4 +37,21 @@ describe('launchdarkly-to-statsig-migration', () => {
       OUTPUT.replace(/W/gm, ''),
     );
   });
+
+  it('test #2', async () => {
+    const INPUT = await readFile(join(__dirname, '..', '__testfixtures__/fixture2.input.ts'), 'utf-8');
+    const OUTPUT = await readFile(join(__dirname, '..', '__testfixtures__/fixture2.output.ts'), 'utf-8');
+
+    const actualOutput = transform({
+        path: 'index.js',
+        source: INPUT,
+      },
+      buildApi('tsx'), {}
+    );
+
+    assert.deepEqual(
+      actualOutput?.replace(/W/gm, ''),
+      OUTPUT.replace(/W/gm, ''),
+    );
+  });
 });
